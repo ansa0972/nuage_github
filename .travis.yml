@@ -4,7 +4,7 @@ python:
   - "3.5.2"
 install:
   - pip3 install pyyaml
-script: python3 test.py
+script: python3 test.py input.yml
 branches:
   only:
     - master
