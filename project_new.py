@@ -65,7 +65,7 @@ def consec_path(path_to_dir,file_name):
 	if len(consecutive_path) >1:
 		yaml_op(consecutive_path,file_name)
 	else:
-		print("There are no consecutive files to merge")
+		print("There are no consecutive files to  merge")
 
 # This function takes the input from the test environment and then separates then ignores sister directories and creates a list of consecutive directories
 def path_to_direc(file_name):
