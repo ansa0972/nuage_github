@@ -5,26 +5,24 @@ import sys
 import project_new
 
 def test_env1(file_name):
-	try:
-		os.makedirs('dir_test1')
-		os.makedirs('dir_test1/dir_test2')
-		os.makedirs('dir_test1/dir_test2/dir_test3/dir_test4')
-		os.makedirs('dir_test1/dir_test2/dir_test3/dir_test4a')
-		print("Successfully created the directories that will be used in the test")
-		print("Creating the YAML files now")
-		with open("dir_test1/"+file_name, 'w') as fh:
-			fh.write("size: 2\ncolor: blue")
-		with open("dir_test1/dir_test2/dir_test3/"+file_name, 'w') as fh:
-			fh.write("size: 2\ncolor: red")
-		with open("dir_test1/dir_test2/dir_test3/dir_test4/"+file_name, 'w') as fh:
-			fh.write("size: 5\ncolor: blue\ncount: 7.5")
-		with open("dir_test1/dir_test2/dir_test3/dir_test4a/"+file_name, 'w') as fh:
-			fh.write("size: 2\ncolor: blue")
-	except:
-		pass
+	os.makedirs('dir_test1')
+	os.makedirs('dir_test1/dir_test2')
+	os.makedirs('dir_test1/dir_test2/dir_test3/dir_test4')
+	os.makedirs('dir_test1/dir_test2/dir_test3/dir_test4a')
+	print("Successfully created the directories that will be used in the test")
+	print("Creating the YAML files now")
+	with open("dir_test1/"+file_name, 'w') as fh:
+		fh.write("size: 2\ncolor: blue")
+	with open("dir_test1/dir_test2/dir_test3/"+file_name, 'w') as fh:
+		fh.write("size: 2\ncolor: red")
+	with open("dir_test1/dir_test2/dir_test3/dir_test4/"+file_name, 'w') as fh:
+		fh.write("size: 5\ncolor: blue\ncount: 7.5")
+	with open("dir_test1/dir_test2/dir_test3/dir_test4a/"+file_name, 'w') as fh:
+		fh.write("size: 2\ncolor: blue")
 	print("YAML files created")
 	print("Passing the files in the source code")
 	project_new.path_to_direc(file_name)
+
 
 def check_filename(file_name):
 	fh,extn= file_name.split('.')
